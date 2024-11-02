@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdgehulsqxppo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vhiot"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="border" type="Area2D" parent="."]
+position = Vector2(513, 644)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border"]
+shape = SubResource("WorldBoundaryShape2D_vhiot")

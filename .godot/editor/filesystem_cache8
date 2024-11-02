@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730553960
+::res://::1730553967
 icon.svg::CompressedTexture2D::2462497521090406658::1730553467::1730553887::1::::<><>::
-::res://scenes/::1730553960
+::res://scenes/::1730553984
 Bedroom.tscn::PackedScene::4656375787129144963::1730553951::0::1::::<><>::
-main_menu.tscn::PackedScene::2609629917959949312::1730553935::0::1::::<><>::
+MainMenu.tscn::PackedScene::2609629917959949312::1730554230::0::1::::<><>::
+ProjectWorld.tscn::PackedScene::65167135233479009::1730553984::0::1::::<><>::
+PlayerMovement.gd::GDScript::-1::1730554257::0::1::::<>CharacterBody2D<>::
 ::res://scripts/::1730553506
 ::res://sprites/::1730553513

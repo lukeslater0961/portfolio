@@ -14,15 +14,20 @@ func _physics_process(_delta: float) -> void: #player movement
 	move_and_slide()
 
 func _process(_delta) -> void: #moves player to center and changes scene
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("ui_accept") && !Globals.inhouse:
 		var tween = create_tween()
 		tween.tween_property(self, "position", target_position, 3.6)
 		await tween.finished
 		get_tree().root.add_child(Globals.Bedroom)
 		get_node("/root/MainMenu").free()
+	elif Input.is_action_just_pressed("ui_accept") && Globals.inhouse:
+		get_tree().root.add_child(Globals.Bedroom)
+		get_node("/root/MainMenu").free()        
 
 func _on_house_body_entered(_body: Node2D) -> void:
 	space.visible = true
+	Globals.inhouse = true
 
 func _on_house_body_exited(_body: Node2D) -> void:
 	space.visible = false
+	Globals.inhouse = false

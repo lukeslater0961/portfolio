@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdg3ias88wdbr"]
+
+[ext_resource type="Script" path="res://scripts/WindowManagement.gd" id="1_r7b0x"]
+[ext_resource type="Texture2D" uid="uid://d34s4cwgb8yo2" path="res://assets/sprites/background.png" id="2_ls4a1"]
+[ext_resource type="Script" path="res://scripts/PlayerMovement.gd" id="3_3h7cv"]
+[ext_resource type="Texture2D" uid="uid://bpetr7sn5vscc" path="res://assets/sprites/bamboo_block.png" id="4_xbam5"]
+[ext_resource type="FontFile" uid="uid://df1hyf0g8g1ey" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="6_lwdif"]
+[ext_resource type="PackedScene" uid="uid://jj1d4tjfujr1" path="res://assets/scenes/Borders.tscn" id="6_o22ou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jbdy"]
+size = Vector2(1030, 1010)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vnej"]
+size = Vector2(102.311, 71)
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(568, 647)
+script = ExtResource("1_r7b0x")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -697.0
+offset_top = -649.0
+offset_right = 1223.0
+offset_bottom = 431.0
+scale = Vector2(0.702518, 0.64563)
+texture = ExtResource("2_ls4a1")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+visibility_layer = 2
+position = Vector2(0, -21)
+script = ExtResource("3_3h7cv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(-2, -33)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_xbam5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1.5, -33.5)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_0jbdy")
+
+[node name="house" type="Area2D" parent="."]
+visibility_layer = 2
+position = Vector2(-2, -55)
+scale = Vector2(1.84731, 3.64933)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house"]
+position = Vector2(-1.08265, 0)
+shape = SubResource("RectangleShape2D_5vnej")
+
+[node name="Space" type="Control" parent="house"]
+visibility_layer = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = -49.8022
+offset_top = -21.0998
+offset_right = -9.80219
+offset_bottom = 18.9002
+scale = Vector2(1.20188, 0.983269)
+
+[node name="Label" type="Label" parent="house/Space"]
+visibility_layer = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.527937, 0.417536)
+theme_override_fonts/font = ExtResource("6_lwdif")
+theme_override_font_sizes/font_size = 16
+text = "Press space
+"
+
+[node name="Borders" parent="." instance=ExtResource("6_o22ou")]
+position = Vector2(-4, 4)
+
+[node name="VolumeController" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -518.0
+offset_top = -498.0
+offset_right = -478.0
+offset_bottom = -458.0
+
+[node name="Label" type="Label" parent="VolumeController"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = -139.0
+offset_right = 149.0
+offset_bottom = -107.0
+theme_override_fonts/font = ExtResource("6_lwdif")
+theme_override_font_sizes/font_size = 32
+text = "Volume"
+
+[node name="HSlider" type="HSlider" parent="VolumeController"]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -94.0
+offset_right = -26.0
+offset_bottom = -78.0
+
+[connection signal="body_entered" from="house" to="Player" method="_on_house_body_entered"]
+[connection signal="body_exited" from="house" to="Player" method="_on_house_body_exited"]

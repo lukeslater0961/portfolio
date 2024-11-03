@@ -1,4 +1,13 @@
-res://scenes/main_menu.tscn
-res://scenes/ProjectWorld.tscn
 res://scenes/MainMenu.tscn
+res://scenes/Bedroom.tscn
+res://scenes/ProjectWorld.tscn
 res://scripts/PlayerMovement.gd
+res://scenes/Borders.tscn
+res://scripts/WindowManagement.gd
+res://scripts/PlayerActions.gd
+res://scenes/PressSpace.tscn
+res://MainMenu.tscn
+res://interact.gd
+res://assets/scenes/MainMenu.tscn
+res://assets/scenes/Borders.tscn
+res://scripts/Globals.gd

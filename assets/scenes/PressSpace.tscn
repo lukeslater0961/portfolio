@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://ddpos4i24fbx7"]
-
-[node name="PressSpace" type="Node2D"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimationPlayer"]

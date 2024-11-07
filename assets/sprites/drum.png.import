@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpetr7sn5vscc"
-path="res://.godot/imported/bamboo_block.png-7bdf79ed5629ed25591a3c81fee79bd1.ctex"
+uid="uid://d1mmhqfbbhghp"
+path="res://.godot/imported/drum.png-024657dd3de2534167dcc8b50ae7df68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bamboo_block.png"
-dest_files=["res://.godot/imported/bamboo_block.png-7bdf79ed5629ed25591a3c81fee79bd1.ctex"]
+source_file="res://assets/sprites/drum.png"
+dest_files=["res://.godot/imported/drum.png-024657dd3de2534167dcc8b50ae7df68.ctex"]
 
 [params]
 

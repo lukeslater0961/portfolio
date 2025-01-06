@@ -1,14 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdg3ias88wdbr"]
+[gd_scene load_steps=8 format=3 uid="uid://bdg3ias88wdbr"]
 
 [ext_resource type="Script" path="res://scripts/MainMenuManager.gd" id="1_r7b0x"]
 [ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="2_ck7ip"]
-[ext_resource type="Texture2D" uid="uid://d1mmhqfbbhghp" path="res://assets/sprites/drum.png" id="3_gqlcs"]
 [ext_resource type="Script" path="res://scripts/rich_text_label.gd" id="5_3ngmk"]
 [ext_resource type="FontFile" uid="uid://df1hyf0g8g1ey" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="6_lwdif"]
 
 [sub_resource type="Animation" id="Animation_d746j"]
 resource_name = "Default"
-length = 4.0
+length = 5.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -17,7 +16,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(568, 320), Vector2(568, 285)]
@@ -48,12 +47,19 @@ _data = {
 position = Vector2(568, 647)
 script = ExtResource("1_r7b0x")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -576.0
+offset_top = -655.0
+offset_right = 584.0
+offset_bottom = -7.0
+color = Color(0, 0, 0, 1)
+
 [node name="Floating bedroom" type="AnimatableBody2D" parent="."]
 position = Vector2(568, 320)
 scale = Vector2(0.3, 0.3)
 
 [node name="Bedroom" type="Sprite2D" parent="Floating bedroom"]
-position = Vector2(-1946.67, -2130)
+position = Vector2(-1883.33, -2130)
 texture = ExtResource("2_ck7ip")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Floating bedroom"]
@@ -63,10 +69,10 @@ libraries = {
 autoplay = "Default"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -187.0
-offset_top = -100.0
-offset_right = 195.0
-offset_bottom = -17.0
+offset_left = -168.0
+offset_top = -103.0
+offset_right = 272.0
+offset_bottom = -66.0
 theme_override_fonts/normal_font = ExtResource("6_lwdif")
 theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
@@ -74,12 +80,8 @@ theme_override_font_sizes/mono_font_size = 30
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 30
 bbcode_enabled = true
+text = "press space
+"
 script = ExtResource("5_3ngmk")
 
 [node name="Objects" type="Node2D" parent="."]
-
-[node name="Drum" type="Sprite2D" parent="Objects"]
-position = Vector2(423, -135)
-rotation = 0.310678
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("3_gqlcs")

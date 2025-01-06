@@ -1,7 +1,2 @@
 res://assets/scenes/MainMenu.tscn
-res://assets/scenes/Borders.tscn
-res://scripts/WindowManagement.gd
-res://scripts/Globals.gd
 res://assets/scenes/Bedroom.tscn
-res://scripts/MainMenuManager.gd
-res://assets/scenes/rich_text_label.gd

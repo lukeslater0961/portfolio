@@ -1,5 +1,18 @@
-[gd_scene format=3 uid="uid://b7lt3gho65ov8"]
+[gd_scene load_steps=3 format=3 uid="uid://b7lt3gho65ov8"]
+
+[ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="1_48diq"]
+
+[sub_resource type="TileSet" id="TileSet_8p6b3"]
 
 [node name="Bedroom" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_8p6b3")
+
+[node name="Floating bedroom" type="AnimatableBody2D" parent="."]
+position = Vector2(568, 320)
+scale = Vector2(0.3, 0.3)
+
+[node name="Bedroom" type="Sprite2D" parent="Floating bedroom"]
+position = Vector2(3.33337, 6.6665)
+texture = ExtResource("1_48diq")

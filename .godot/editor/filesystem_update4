@@ -1,5 +1,4 @@
 res://assets/scenes/Bedroom.tscn
 res://assets/scenes/MainMenu.tscn
+res://assets/scenes/player.tscn
 res://assets/scenes/character_body_2d.gd
-res://assets/scenes/bedroom.gd
-res://scripts/rich_text_label.gd

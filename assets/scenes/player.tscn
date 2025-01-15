@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://l8igebdgb15a"]
 
 [ext_resource type="Texture2D" uid="uid://c8btcl20f2bo2" path="res://assets/sprites/zenitsu_face.png" id="1_hlab7"]
-[ext_resource type="Script" path="res://assets/scenes/character_body_2d.gd" id="1_r2b03"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_r2b03"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r7pbw"]
-radius = 29.0172
+radius = 22.0227
 
 [node name="Player" type="Node2D"]
 

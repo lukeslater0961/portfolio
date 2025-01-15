@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b7lt3gho65ov8"]
+[gd_scene load_steps=12 format=4 uid="uid://b7lt3gho65ov8"]
 
 [ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="1_48diq"]
 [ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_ui6np"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dr6ai83dionvo" path="res://assets/sprites/bed.png" id="3_1qg1y"]
 [ext_resource type="FontFile" uid="uid://dn2p7r3icxphc" path="res://assets/fonts/PixelOperator8.ttf" id="4_csxqc"]
 [ext_resource type="PackedScene" uid="uid://l8igebdgb15a" path="res://assets/scenes/player.tscn" id="6_0pqu7"]
+[ext_resource type="PackedScene" uid="uid://b8q6y6orwhume" path="res://assets/scenes/dialog_box.tscn" id="7_cfils"]
+[ext_resource type="PackedScene" uid="uid://d2mtonk1esrrs" path="res://assets/scenes/fade_transition.tscn" id="8_0uno5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gho"]
 texture = ExtResource("2_ke20g")
@@ -232,10 +234,6 @@ sources/0 = SubResource("TileSetAtlasSource_v4gho")
 radius = 26.6813
 height = 135.517
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eksuk"]
-radius = 35.9761
-height = 89.6395
-
 [node name="Bedroom" type="Node2D"]
 position = Vector2(-1, 0)
 script = ExtResource("1_ui6np")
@@ -254,7 +252,7 @@ texture = ExtResource("1_48diq")
 [node name="Player" parent="." instance=ExtResource("6_0pqu7")]
 position = Vector2(790, 477)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="bed" type="Sprite2D" parent="."]
 position = Vector2(647, 503)
 scale = Vector2(0.540001, 0.5)
 texture = ExtResource("3_1qg1y")
@@ -277,16 +275,6 @@ position = Vector2(-2, -5)
 rotation = 0.118682
 shape = SubResource("CapsuleShape2D_uv3vk")
 
-[node name="BedCollider" type="Node2D" parent="."]
-position = Vector2(635, 484)
-
-[node name="Area2D" type="Area2D" parent="BedCollider"]
-position = Vector2(-1, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BedCollider/Area2D"]
-rotation = -0.837758
-shape = SubResource("CapsuleShape2D_eksuk")
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -302,3 +290,12 @@ offset_bottom = -621.496
 theme_override_fonts/font = ExtResource("4_csxqc")
 theme_override_font_sizes/font_size = 30
 text = "00:00"
+
+[node name="DialogBox" parent="." instance=ExtResource("7_cfils")]
+position = Vector2(651, 453)
+
+[node name="FadeTransition" parent="." instance=ExtResource("8_0uno5")]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0

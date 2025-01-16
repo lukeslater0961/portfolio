@@ -1,8 +1,1 @@
-res://assets/scenes/dialog_box.tscn
-res://assets/scenes/player.tscn
-res://assets/scenes/MainMenu.tscn
 res://assets/scenes/Bedroom.tscn
-res://dialog_box.gd
-res://assets/scenes/fade_transition.tscn
-res://scripts/bedroom.gd
-res://scripts/Globals.gd

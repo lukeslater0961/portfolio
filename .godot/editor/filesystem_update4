@@ -1,3 +1,9 @@
 res://assets/scenes/Bedroom.tscn
-res://scripts/bedroom.gd
+res://assets/scenes/transition_screen.tscn
+res://scripts/transition_screen.gd
+res://assets/scenes/dialog_box.tscn
 res://scripts/Globals.gd
+res://assets/scenes/MainMenu.tscn
+res://assets/scenes/player.tscn
+res://scripts/bedroom.gd
+res://dialog_box.gd

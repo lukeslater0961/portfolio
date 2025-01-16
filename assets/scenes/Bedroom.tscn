@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b7lt3gho65ov8"]
+[gd_scene load_steps=11 format=4 uid="uid://b7lt3gho65ov8"]
 
 [ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="1_48diq"]
 [ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_ui6np"]
@@ -7,9 +7,6 @@
 [ext_resource type="FontFile" uid="uid://dn2p7r3icxphc" path="res://assets/fonts/PixelOperator8.ttf" id="4_csxqc"]
 [ext_resource type="PackedScene" uid="uid://l8igebdgb15a" path="res://assets/scenes/player.tscn" id="6_0pqu7"]
 [ext_resource type="PackedScene" uid="uid://b8q6y6orwhume" path="res://assets/scenes/dialog_box.tscn" id="7_cfils"]
-[ext_resource type="PackedScene" uid="uid://d2mtonk1esrrs" path="res://assets/scenes/fade_transition.tscn" id="8_0uno5"]
-[ext_resource type="Texture2D" uid="uid://2eg05bta0l71" path="res://assets/sprites/origins_of_symmetry_2.png" id="9_4ajab"]
-[ext_resource type="Texture2D" uid="uid://b6xiitn16x0jh" path="res://assets/sprites/Jordan2.png" id="10_hlc2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gho"]
 texture = ExtResource("2_ke20g")
@@ -277,11 +274,16 @@ position = Vector2(-2, -5)
 rotation = 0.118682
 shape = SubResource("CapsuleShape2D_uv3vk")
 
+[node name="DialogBox" parent="." instance=ExtResource("7_cfils")]
+position = Vector2(651, 453)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 82.0
-offset_bottom = 48.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 83.0
+offset_bottom = 47.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
@@ -292,21 +294,3 @@ offset_bottom = -621.496
 theme_override_fonts/font = ExtResource("4_csxqc")
 theme_override_font_sizes/font_size = 30
 text = "00:00"
-
-[node name="DialogBox" parent="." instance=ExtResource("7_cfils")]
-position = Vector2(651, 453)
-
-[node name="FadeTransition" parent="." instance=ExtResource("8_0uno5")]
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = -1.0
-
-[node name="OriginsOfSymmetry2" type="Sprite2D" parent="."]
-position = Vector2(460, 166)
-scale = Vector2(1.22656, 1.35547)
-texture = ExtResource("9_4ajab")
-
-[node name="Jordan2" type="Sprite2D" parent="."]
-position = Vector2(430, 240)
-texture = ExtResource("10_hlc2v")

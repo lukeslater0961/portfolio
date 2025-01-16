@@ -21,6 +21,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://scripts/Globals.gd"
+Bedroom="*res://assets/scenes/Bedroom.tscn"
+TransitionScreen="*res://assets/scenes/transition_screen.tscn"
 
 [display]
 

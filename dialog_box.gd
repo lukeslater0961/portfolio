@@ -11,6 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if isentered and Input.is_key_pressed(KEY_E):
 		Globals.DoSleepCycle()
+		isentered = false 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:

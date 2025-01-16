@@ -1,5 +1,9 @@
+Label
+Container
+Control
 AnimationPlayer
 ColorRect
+CanvasLayer
 Area2D
 CollisionPolygon2D
 CollisionShape2D
@@ -7,8 +11,4 @@ Sprite2D
 Node
 Node2D
 CharacterBody2D
-Control
-Label
 RichTextLabel
-Container
-Camera2D

@@ -7,3 +7,5 @@ res://assets/scenes/MainMenu.tscn
 res://assets/scenes/player.tscn
 res://scripts/bedroom.gd
 res://dialog_box.gd
+res://assets/scenes/Clock.tscn
+res://assets/scenes/ClockManager.gd

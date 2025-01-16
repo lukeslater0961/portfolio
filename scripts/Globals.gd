@@ -13,7 +13,10 @@ var time: String
 func _ready()->void:
 	Globals.current_hours = randi_range(00, 24)
 	Globals.current_minutes = randi_range(00, 59)
-	Globals.time = str(current_hours) + ":" + str(current_minutes)
+	if (Globals.current_minutes < 10):
+		Globals.time = str(current_hours) + ":" + "0" + str(current_minutes)
+	else:
+		Globals.time = str(current_hours) + ":" + str(current_minutes)
 	print("time set to = ", time)
 
 func change_scene(scene_name: Node, current_scene : String) -> void:
@@ -36,4 +39,7 @@ func Change_Time_of_day(current_hours) ->void:
 		Globals.current_hours = 06
 	else  :
 		Globals.current_hours = 21
-	Globals.time = str(Globals.current_hours) + ":" + str(Globals.current_minutes)
+	if (Globals.current_minutes < 10):
+		Globals.time = str(current_hours) + ":" + "0" + str(current_minutes)
+	else:
+		Globals.time = str(current_hours) + ":" + str(current_minutes)

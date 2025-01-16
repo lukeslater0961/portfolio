@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var box: Sprite2D = $"../Box"
-@onready var player: Node2D = $Player
 
 var isentered : bool  = false
 

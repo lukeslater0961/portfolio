@@ -1,12 +1,12 @@
 extends CanvasLayer
 
 signal on_transition_finished
-
 var is_transitioning = false
 
 @onready var color_rect: ColorRect = $ColorRect
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var control: Control = $Control
+@onready var label: Label = $Control/Container/Label
 
 func _ready() -> void:
 	color_rect.visible = false
@@ -27,10 +27,28 @@ func _on_animation_finished(anim_name: String) -> void:
 		color_rect.visible = false
 		control.visible = false
 
-
 func _transition() -> void:
 	if is_transitioning:
 		return
 	color_rect.visible = true
 	control.visible = true
 	animation_player.play("fade_in")
+	label.text = str(Globals.time)
+	Do_Clock_Animation()  
+
+
+##Handle clock changing animation___________________________
+
+func Do_Clock_Animation()->void:
+	var current_hours = Globals.current_hours
+	var current_minutes = Globals.current_minutes
+	if (Globals.TimeChange):
+		label_time(6)
+	else :
+		label_time(21)
+
+func label_time(hours)->void:
+	if (Globals.current_minutes < 10):
+		label.text = str(hours) + ":" + "0" + str(Globals.current_minutes)
+	else:
+		label.text = str(hours) + ":" + str(Globals.current_minutes)

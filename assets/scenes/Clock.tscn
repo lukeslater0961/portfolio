@@ -18,3 +18,5 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("1_ypur8")
 theme_override_font_sizes/font_size = 25
+
+[node name="FadeTimer" type="Timer" parent="."]

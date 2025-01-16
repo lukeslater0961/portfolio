@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://b7lt3gho65ov8"]
+[gd_scene load_steps=14 format=4 uid="uid://b7lt3gho65ov8"]
 
 [ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="1_48diq"]
 [ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_ui6np"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b8q6y6orwhume" path="res://assets/scenes/dialog_box.tscn" id="7_cfils"]
 [ext_resource type="PackedScene" uid="uid://d2mtonk1esrrs" path="res://assets/scenes/fade_transition.tscn" id="8_0uno5"]
 [ext_resource type="Texture2D" uid="uid://2eg05bta0l71" path="res://assets/sprites/origins_of_symmetry_2.png" id="9_4ajab"]
+[ext_resource type="Texture2D" uid="uid://b6xiitn16x0jh" path="res://assets/sprites/Jordan2.png" id="10_hlc2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gho"]
 texture = ExtResource("2_ke20g")
@@ -305,3 +306,7 @@ offset_bottom = -1.0
 position = Vector2(460, 166)
 scale = Vector2(1.22656, 1.35547)
 texture = ExtResource("9_4ajab")
+
+[node name="Jordan2" type="Sprite2D" parent="."]
+position = Vector2(430, 240)
+texture = ExtResource("10_hlc2v")

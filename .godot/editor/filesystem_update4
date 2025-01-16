@@ -1,1 +1,3 @@
 res://assets/scenes/Bedroom.tscn
+res://scripts/bedroom.gd
+res://scripts/Globals.gd

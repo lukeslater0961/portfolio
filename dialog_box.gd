@@ -7,7 +7,7 @@ var isentered : bool  = false
 func _ready() -> void:
 	$"../Box".visible = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if isentered and Input.is_key_pressed(KEY_E):
 		Globals.DoSleepCycle()
 		isentered = false 

@@ -9,9 +9,12 @@ var current_minutes: int
 var time: String 
 
 var TimeChange
+
+var ChangingTime
 	
 ##Sets all values (for the minute the time) for the game__________________
 func _ready()->void:
+	ChangingTime = false
 	Globals.current_hours = randi_range(00, 23)
 	Globals.current_minutes = randi_range(00, 59)
 	if (Globals.current_minutes < 10):
@@ -33,9 +36,11 @@ func DoSleepCycle() ->void:
 	await TransitionScreen.on_transition_finished
 	TransitionScreen.is_transitioning = false
 	Change_Time_of_day()
+	ChangingTime = false
 	print("time changed to = ",time)
 
 func Change_Time_of_day() ->void:
+	ChangingTime = true
 	if (Globals.current_hours >= 21 or Globals.current_hours < 06):
 		Globals.current_hours = 06
 		Globals.TimeChange = false

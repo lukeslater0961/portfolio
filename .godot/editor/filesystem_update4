@@ -1,9 +1,11 @@
 res://assets/scenes/Bedroom.tscn
-res://assets/scenes/transition_screen.tscn
-res://scripts/transition_screen.gd
-res://scripts/Globals.gd
-res://assets/scenes/Clock.tscn
+res://scripts/ClockManager.gd
 res://assets/scenes/MainMenu.tscn
 res://assets/scenes/player.tscn
 res://assets/scenes/dialog_box.tscn
+res://assets/scenes/transition_screen.tscn
+res://assets/scenes/Clock.tscn
+res://scripts/Globals.gd
+res://scripts/character_body_2d.gd
 res://dialog_box.gd
+res://scripts/bedroom.gd

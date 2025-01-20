@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://b7lt3gho65ov8"]
+[gd_scene load_steps=10 format=4 uid="uid://b7lt3gho65ov8"]
 
 [ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="1_48diq"]
 [ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_ui6np"]
 [ext_resource type="Texture2D" uid="uid://cf2fcmr0gu8tm" path="res://assets/sprites/spritesheet.png" id="2_ke20g"]
 [ext_resource type="Texture2D" uid="uid://dr6ai83dionvo" path="res://assets/sprites/bed.png" id="3_1qg1y"]
 [ext_resource type="PackedScene" uid="uid://l8igebdgb15a" path="res://assets/scenes/player.tscn" id="6_0pqu7"]
-[ext_resource type="PackedScene" uid="uid://b8q6y6orwhume" path="res://assets/scenes/dialog_box.tscn" id="7_cfils"]
 [ext_resource type="PackedScene" uid="uid://chdmahhitpjaq" path="res://assets/scenes/Clock.tscn" id="7_pkmip"]
+[ext_resource type="PackedScene" uid="uid://b8q6y6orwhume" path="res://assets/scenes/InteractComponent.tscn" id="7_y8y7e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gho"]
 texture = ExtResource("2_ke20g")
@@ -229,10 +229,6 @@ tile_size = Vector2i(32, 16)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v4gho")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uv3vk"]
-radius = 26.6813
-height = 135.517
-
 [node name="Bedroom" type="Node2D"]
 position = Vector2(-1, 0)
 script = ExtResource("1_ui6np")
@@ -264,18 +260,13 @@ position = Vector2(45, 61)
 tile_map_data = PackedByteArray("AAD8/w0AAAAJAAcAAAD9/w0AAAAJAAcAAAD+/w0AAAAJAAcAAAD//w0AAAAJAAcAAAD//w4AAAAJAAcAAAD//w8AAAAJAAcAAAAAAA8AAAAJAAcAAAABAA8AAAAJAAcAAAACAA8AAAAJAAcAAAADAA8AAAAJAAcAAAAEAA8AAAAJAAcAAAAFAA8AAAAJAAcAAAAFAA4AAAAJAAcAAAAFAA0AAAAJAAcAAAAGAA0AAAAJAAcAAAAHAA0AAAAJAAcAAAAIAA0AAAAJAAcAAAAJAA0AAAAJAAcAAAAKAA0AAAAJAAcAAAALAA0AAAAJAAcAAAAMAA0AAAAJAAcAAAANAA0AAAAJAAcAAAAOAA0AAAAJAAcAAAAPAA0AAAAJAAcAAAAQAA0AAAAJAAcAAAARAA0AAAAJAAcAAAASAA0AAAAJAAcAAAASAAwAAAAJAAcAAAASAAsAAAAJAAcAAAATAAsAAAAJAAcAAAAUAAsAAAAJAAcAAAAUAAoAAAAJAAcAAAAUAAkAAAAJAAcAAAAUAAgAAAAJAAcAAAATAAgAAAAJAAcAAAASAAgAAAAJAAcAAAAUAAcAAAAJAAcAAAAUAAYAAAAJAAcAAAAUAAUAAAAJAAcAAAAUAAQAAAAJAAcAAAATAAQAAAAJAAcAAAASAAQAAAAJAAcAAAASAAMAAAAJAAcAAAATAAMAAAAJAAcAAAAUAAMAAAAJAAcAAAAUAAIAAAAJAAcAAAAUAAEAAAAJAAcAAAAUAAAAAAAJAAcAAAATAAAAAAAJAAcAAAASAAAAAAAJAAcAAAASAP//AAAJAAcAAAATAP//AAAJAAcAAAAUAP//AAAJAAcAAAAUAP7/AAAJAAcAAAAUAP3/AAAJAAcAAAAUAPz/AAAJAAcAAAATAPz/AAAJAAcAAAASAPz/AAAJAAcAAAARAPz/AAAJAAcAAAAQAPz/AAAJAAcAAAAPAPz/AAAJAAcAAAAOAPz/AAAJAAcAAAANAPz/AAAJAAcAAAAMAPz/AAAJAAcAAAALAPz/AAAJAAcAAAAKAPz/AAAJAAcAAAAJAPz/AAAJAAcAAAAIAPz/AAAJAAcAAAAHAPz/AAAJAAcAAAAGAPz/AAAJAAcAAAAFAPz/AAAJAAcAAAAEAPz/AAAJAAcAAAADAPz/AAAJAAcAAAACAPz/AAAJAAcAAAABAPz/AAAJAAcAAAAAAPz/AAAJAAcAAAD///z/AAAJAAcAAAD+//z/AAAJAAcAAAD9//z/AAAJAAcAAAD8//z/AAAJAAcAAAD7//z/AAAJAAcAAAD7//3/AAAJAAcAAAD7//7/AAAJAAcAAAD7////AAAJAAcAAAD7/wAAAAAJAAcAAAD7/wEAAAAJAAcAAAD7/wIAAAAJAAcAAAD7/wMAAAAJAAcAAAD7/wQAAAAJAAcAAAD7/wUAAAAJAAcAAAD7/wYAAAAJAAcAAAD7/wcAAAAJAAcAAAD7/wgAAAAJAAcAAAD7/wkAAAAJAAcAAAD7/woAAAAJAAcAAAD7/wsAAAAJAAcAAAD7/wwAAAAJAAcAAAD7/w0AAAAJAAcAAAD6/w0AAAAJAAcAAAD6/wwAAAAJAAcAAAD7/w4AAAAJAAcAAAD8/w4AAAAJAAcAAAD9/w4AAAAJAAcAAAD+/w4AAAAJAAcAAAAMAAoAAAAJAAcAAAAMAAkAAAAJAAcAAAAMAAgAAAAJAAcAAAAMAAcAAAAJAAcAAAAMAAYAAAAJAAcAAAAMAAUAAAAJAAcAAAAMAAQAAAAJAAcAAAAMAAMAAAAJAAcAAAANAAMAAAAJAAcAAAAOAAMAAAAJAAcAAAAPAAMAAAAJAAcAAAAQAAMAAAAJAAcAAAARAAMAAAAJAAcAAAAMAAsAAAAJAAcAAAAMAAwAAAAJAAcAAAAMAA4AAAAJAAcAAAA=")
 tile_set = SubResource("TileSet_3qjai")
 
-[node name="PortalCollider" type="Node2D" parent="."]
-position = Vector2(688, 266)
+[node name="Interactables" type="Node" parent="."]
 
-[node name="Area2D" type="Area2D" parent="PortalCollider"]
+[node name="Portal" parent="Interactables" instance=ExtResource("7_y8y7e")]
+position = Vector2(670, 330)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalCollider/Area2D"]
-position = Vector2(-2, -5)
-rotation = 0.118682
-shape = SubResource("CapsuleShape2D_uv3vk")
-
-[node name="DialogBox" parent="." instance=ExtResource("7_cfils")]
-position = Vector2(651, 453)
+[node name="Bed" parent="Interactables" instance=ExtResource("7_y8y7e")]
+position = Vector2(639, 468)
 
 [node name="Clock" parent="." instance=ExtResource("7_pkmip")]
 anchors_preset = 0

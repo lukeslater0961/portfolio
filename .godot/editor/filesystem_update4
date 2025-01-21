@@ -4,9 +4,4 @@ res://assets/scenes/player.tscn
 res://assets/scenes/InteractComponent.tscn
 res://assets/scenes/transition_screen.tscn
 res://assets/scenes/Clock.tscn
-res://dialog_box.gd
-res://scripts/Globals.gd
-res://scripts/transition_screen.gd
 res://assets/scenes/ProjectWorld.tscn
-res://scripts/bedroom.gd
-res://scripts/MainMenuManager.gd

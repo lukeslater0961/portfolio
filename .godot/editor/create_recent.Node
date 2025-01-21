@@ -1,5 +1,8 @@
-Node
+VideoStreamPlayer
 CollisionShape2D
+Area2D
+Node2D
+Node
 Label
 Timer
 Control
@@ -7,8 +10,6 @@ Container
 AnimationPlayer
 ColorRect
 CanvasLayer
-Area2D
 CollisionPolygon2D
 Sprite2D
-Node2D
 CharacterBody2D

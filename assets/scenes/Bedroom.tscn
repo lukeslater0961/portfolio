@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://b7lt3gho65ov8"]
+[gd_scene load_steps=11 format=4 uid="uid://b7lt3gho65ov8"]
 
 [ext_resource type="Texture2D" uid="uid://c7m227aphd0bl" path="res://assets/sprites/Bedroom.png" id="1_48diq"]
 [ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_ui6np"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://l8igebdgb15a" path="res://assets/scenes/player.tscn" id="6_0pqu7"]
 [ext_resource type="PackedScene" uid="uid://chdmahhitpjaq" path="res://assets/scenes/Clock.tscn" id="7_pkmip"]
 [ext_resource type="PackedScene" uid="uid://b8q6y6orwhume" path="res://assets/scenes/InteractComponent.tscn" id="7_y8y7e"]
+[ext_resource type="Texture2D" uid="uid://diyuekikebdcm" path="res://assets/sprites/origins_of_symmetry_official.png" id="8_w4hf5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gho"]
 texture = ExtResource("2_ke20g")
@@ -276,3 +277,8 @@ grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 0
 size_flags_vertical = 0
+
+[node name="OriginsOfSymmetryOfficial" type="Sprite2D" parent="."]
+position = Vector2(431, 269)
+scale = Vector2(0.340164, 0.268303)
+texture = ExtResource("8_w4hf5")

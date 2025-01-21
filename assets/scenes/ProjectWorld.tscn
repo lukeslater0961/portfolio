@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://6tj761yj1uj"]
+[gd_scene load_steps=3 format=3 uid="uid://6tj761yj1uj"]
+
+[ext_resource type="Texture2D" uid="uid://bjerkljjl14v" path="res://assets/sprites/project_world.png" id="1_1162f"]
+[ext_resource type="PackedScene" uid="uid://ka0g4ll2unpr" path="res://assets/scenes/ground.tscn" id="2_f5st6"]
 
 [node name="ProjectWorld" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ProjectWorld" type="Sprite2D" parent="Background"]
+position = Vector2(576, 336)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("1_1162f")
+
+[node name="ground" parent="Background" instance=ExtResource("2_f5st6")]
+position = Vector2(536, 647)

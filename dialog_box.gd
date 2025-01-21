@@ -30,7 +30,8 @@ func _on_body_exited(body: Node2D) -> void:
 func doInteract() -> void:
 	if (ObjectType == "Bed"):
 		Globals.DoSleepCycle()
-		isentered = false 
+		isentered = false
 	else: if (ObjectType == "Portal"):
 		print("boo")
+		Globals.DoTransition("Bedroom", Globals.ProjectWorld)
 		isentered = false 

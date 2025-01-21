@@ -1,17 +1,17 @@
 extends Node
 
-#preloads the scenes so redude lag when switching
+#preloads the scenes so reduce lag when switching
 var Bedroom = preload("res://assets/scenes/Bedroom.tscn").instantiate()
 var ProjectWorld = preload("res://assets/scenes/ProjectWorld.tscn").instantiate()
+var MainMenu = preload("res://assets/scenes/MainMenu.tscn").instantiate()
 
+var transitonType
 var current_hours: int
 var current_minutes: int
 var time: String 
-
 var TimeChange
-
 var ChangingTime
-	
+
 ##Sets all values (for the minute the time) for the game__________________
 func _ready()->void:
 	ChangingTime = false
@@ -23,15 +23,14 @@ func _ready()->void:
 		Globals.time = str(current_hours) + ":" + str(current_minutes)
 	print("time set to = ", time)
 
-func change_scene(scene_name: Node, current_scene : String) -> void:
+func change_scene(scene_name: Node, current_scene: String) -> void:
 	var scene_path = "/root/" + current_scene
 	get_tree().root.add_child(scene_name)
 	get_node(scene_path).free()
 
-
-
 ## Handles the sleeping animation and the time changing__________________
 func DoSleepCycle() ->void:
+	transitonType = 0
 	TransitionScreen._transition()
 	await TransitionScreen.on_transition_finished
 	TransitionScreen.is_transitioning = false
@@ -51,3 +50,11 @@ func Change_Time_of_day() ->void:
 		Globals.time = str(Globals.current_hours) + ":" + "0" + str(Globals.current_minutes)
 	else:
 		Globals.time = str(Globals.current_hours) + ":" + str(Globals.current_minutes)
+
+##Normal screen transition________________________________________________
+func DoTransition(current_scene : String , next_scene: Node) ->void:
+	transitonType = 1
+	TransitionScreen._transition()
+	await TransitionScreen.on_transition_finished
+	TransitionScreen.is_transitioning = false
+	change_scene(next_scene, current_scene)

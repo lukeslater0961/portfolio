@@ -31,7 +31,8 @@ func _transition() -> void:
 	if is_transitioning:
 		return
 	color_rect.visible = true
-	control.visible = true
+	if (Globals.transitonType == 0):
+		control.visible = true
 	animation_player.play("fade_in")
 	label.text = str(Globals.time)
 	Do_Clock_Animation()  
@@ -40,8 +41,6 @@ func _transition() -> void:
 ##Handle clock changing animation___________________________
 
 func Do_Clock_Animation()->void:
-	var current_hours = Globals.current_hours
-	var current_minutes = Globals.current_minutes
 	if (Globals.TimeChange):
 		label_time(6)
 	else :

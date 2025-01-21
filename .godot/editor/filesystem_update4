@@ -1,8 +1,12 @@
-res://assets/scenes/dialog_box.tscn
-res://dialog_box.gd
-res://assets/scenes/MainMenu.tscn
 res://assets/scenes/Bedroom.tscn
+res://assets/scenes/MainMenu.tscn
 res://assets/scenes/player.tscn
+res://assets/scenes/InteractComponent.tscn
 res://assets/scenes/transition_screen.tscn
 res://assets/scenes/Clock.tscn
-res://assets/scenes/InteractComponent.tscn
+res://dialog_box.gd
+res://scripts/Globals.gd
+res://scripts/transition_screen.gd
+res://assets/scenes/ProjectWorld.tscn
+res://scripts/bedroom.gd
+res://scripts/MainMenuManager.gd
